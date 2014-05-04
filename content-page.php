@@ -12,7 +12,13 @@
 	<?php
 		// Page thumbnail and title.
 		twentyfourteen_post_thumbnail();
-		the_title( '<header class="entry-header"><h1 class="entry-title">', '</h1></header><!-- .entry-header -->' );
+		if (is_single()):
+			//the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
+		else :
+			the_title( '<h2 class="entry-title">', '</h2>' );
+		endif;
+
 	?>
 
 	<div class="entry-content">

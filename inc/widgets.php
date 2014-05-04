@@ -106,9 +106,9 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 
 			echo $args['before_widget'];
 			?>
-			<h1 class="widget-title <?php echo esc_attr( $format ); ?>">
+			<p class="widget-title <?php echo esc_attr( $format ); ?>">
 				<a class="entry-format" href="<?php echo esc_url( get_post_format_link( $format ) ); ?>"><?php echo $title; ?></a>
-			</h1>
+			</p>
 			<ol>
 
 				<?php
@@ -178,7 +178,7 @@ class Twenty_Fourteen_Ephemera_Widget extends WP_Widget {
 						<div class="entry-meta">
 							<?php
 								if ( ! has_post_format( 'link' ) ) :
-									the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+									the_title( '<p class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></p>' );
 								endif;
 
 								printf( '<span class="entry-date"><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s">%3$s</time></a></span> <span class="byline"><span class="author vcard"><a class="url fn n" href="%4$s" rel="author">%5$s</a></span></span>',
