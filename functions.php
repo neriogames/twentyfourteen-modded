@@ -124,10 +124,10 @@ add_action( 'after_setup_theme', 'twentyfourteen_setup' );
  */
 function twentyfourteen_content_width() {
 	if ( is_attachment() && wp_attachment_is_image() ) {
-		$GLOBALS['content_width'] = 810;
+		$GLOBALS['content_width'] = 474;
 	}
 }
-add_action( 'template_redirect', 'twentyfourteen_content_width' );
+//add_action( 'template_redirect', 'twentyfourteen_content_width' );
 
 /**
  * Getter function for Featured Content Plugin.
@@ -415,7 +415,7 @@ function twentyfourteen_body_classes( $classes ) {
 	if ( ( ! is_active_sidebar( 'sidebar-2' ) )
 		|| is_page_template( 'page-templates/full-width.php' )
 		|| is_page_template( 'page-templates/contributors.php' )
-		|| is_attachment() ) {
+  ) {
 		$classes[] = 'full-width';
 	}
 

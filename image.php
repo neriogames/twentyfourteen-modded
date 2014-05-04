@@ -12,8 +12,7 @@ $metadata = wp_get_attachment_metadata();
 
 get_header();
 ?>
-
-	<section id="primary" class="content-area image-attachment">
+	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
 	<?php
@@ -70,10 +69,10 @@ get_header();
 			<?php comments_template(); ?>
 
 		<?php endwhile; // end of the loop. ?>
-
 		</div><!-- #content -->
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
+<?php get_sidebar( 'content' ); ?>
 <?php
 get_sidebar();
 get_footer();
